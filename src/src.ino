@@ -1,9 +1,17 @@
-#include "bumer.h"
+//#include "bumer.h"
+//#include "melody.h"
+//#include "zummer.h"
+#include "zummerWithButton.h"
+
+const int outputDiodPin = 13;
+const int outputZumPin = 8;
 
 void setup() {
-    pinMode(output_pin, OUTPUT);
+    initialization(outputDiodPin, outputZumPin);
+    Serial.begin(9600);
 }
 
 void loop() {
-    bumer();
+    initialization(outputDiodPin, outputZumPin);
+    zummerBut(outputDiodPin, outputZumPin);
 }
