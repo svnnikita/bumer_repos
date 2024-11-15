@@ -5,13 +5,13 @@
 
 const int outputDiodPin = 13;
 const int outputZumPin = 8;
+const int analogDiodPin = 19;
 
 void setup() {
-    initialization(outputDiodPin, outputZumPin);
+    initialization(analogDiodPin, outputDiodPin, outputZumPin);
     Serial.begin(9600);
 }
 
 void loop() {
-    initialization(outputDiodPin, outputZumPin);
-    zummerBut(outputDiodPin, outputZumPin);
+    zummerBut(analogDiodPin, outputDiodPin, outputZumPin);
 }

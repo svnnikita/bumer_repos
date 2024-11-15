@@ -9,10 +9,10 @@ enum mode {
 } State;
 
 // функция инициализации необходимых выводов
-void initialization(const int diodPin, const int zummerPin) { 
+void initialization(const int analogPin, const int diodPin, const int zummerPin) { 
 
     // инициализация вывода, который считывает аналоговый сигнал
-    pinMode(A5, INPUT_PULLUP);
+    pinMode(analogPin, INPUT_PULLUP);
 
     // управляющий вывод, с которого пойдет сигнал на светодиод L 
     pinMode(diodPin, OUTPUT);
@@ -23,7 +23,7 @@ void initialization(const int diodPin, const int zummerPin) {
 }
 
 // функция работы зуммера с кнопки
-void zummerBut(const int diodPin, const int zummerPin) {
+void zummerBut(const int analogPin, const int diodPin, const int zummerPin) {
 
     // инициализация переменных, которые будут выводится
     // в последовательный монитор и которые будут хранить 
